@@ -1,0 +1,29 @@
+# BRCA Spatial Transcriptomics Analysis
+# Python and R package dependencies for reproducibility
+# Author: Research Team
+# Date: 2024
+
+# ============ Python Dependencies ============
+scanpy>=1.9.0
+pandas>=1.5.0
+numpy>=1.21.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+squidpy>=1.2.0
+scikit-learn>=1.1.0
+scipy>=1.9.0
+h5py>=3.7.0
+anndata>=0.8.0
+
+# Optional: for R integration
+# rpy2>=3.5.0
+
+# ============ R Dependencies ============
+# Install via Bioconductor/CRAN:
+# install.packages(c("Seurat", "dplyr", "ggplot2", "patchwork"))
+# BiocManager::install(c("CellChat", "ComplexHeatmap"))
+
+# ============ Installation Instructions ============
+# Python: pip install -r 00_requirements.txt
+# R packages: See install_R_packages.R script
+

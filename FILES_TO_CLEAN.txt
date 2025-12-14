@@ -1,0 +1,76 @@
+# BRCA Spatial Transcriptomics - File Cleanup Guide
+# =================================================
+# 
+# The following files in the parent directory are intermediate scripts
+# that have been consolidated into the publication_code folder.
+# They can be safely removed after confirming the publication code works.
+#
+# IMPORTANT: Keep backup before deleting!
+#
+# ==== Python Scripts to Remove (Intermediate Versions) ====
+#
+# Main analysis chain (consolidated into publication_code/):
+# - spatial_colocalization_analysis.py        -> 01_spatial_colocalization_base.py
+# - enhanced_il1r1_cxcl13_analysis.py         -> 02_il1r1_cxcl13_extended_analysis.py  
+# - final_enhanced_analysis_with_tumor.py     -> 03_comprehensive_analysis_with_tumor_and_cdkn1a.py
+# - comprehensive_analysis_with_CDKN1A.py     -> 03_comprehensive_analysis_with_tumor_and_cdkn1a.py
+# - final_comprehensive_analysis.py           -> 03_comprehensive_analysis_with_tumor_and_cdkn1a.py
+#
+# CellPhoneDB analysis scripts (alternative analysis methods):
+# - cellphonedb_brca_analysis.py              -> Optional, CellPhoneDB approach
+# - brca_cellphonedb_analysis.py              -> Optional, CellPhoneDB approach
+# - cellphonedb_il1r1_cxcl13_analysis.py      -> Optional, CellPhoneDB approach
+# - advanced_cellphonedb_analysis.py          -> Optional, CellPhoneDB approach
+# - celltypist_cellphonedb_analysis.py        -> Optional, CellPhoneDB approach
+# - fixed_celltypist_cellphonedb_analysis.py  -> Optional, CellPhoneDB approach
+# - continue_cellphonedb_analysis.py          -> Optional, CellPhoneDB approach
+# - final_comprehensive_cellphonedb_analysis.py -> Optional, CellPhoneDB approach
+# - comprehensive_il1r1_cxcl13_cellphonedb_analysis.py -> Optional, CellPhoneDB approach
+#
+# CellChat related:
+# - cellchat_il1r1_cxcl13_analysis.py         -> 04_cellchat_analysis.R
+#
+# SpotSweeper analysis:
+# - spatial_analysis_with_spotsweeper.py      -> Optional QC approach
+#
+# ==== R Scripts ====
+# - cellchat_analysis.R                       -> 04_cellchat_analysis.R (consolidated)
+# - install_cellchat.R                        -> Keep if needed for installation
+# - install_spotsweeper.R                     -> Keep if needed for installation
+#
+# ==== Files to KEEP ====
+# - BRCA_GSE176078_TS.h5ad                    -> Single-cell reference data
+# - BRCA_GSE176078_TS.rds                     -> Single-cell reference data
+# - download_page_*_spatial/                  -> Spatial data folders
+# - requirements.txt                          -> Python dependencies
+# - All .pdf/.png visualization outputs       -> Results
+# - All .csv result files                     -> Results
+# - publication_code/                         -> Final code for publication
+#
+# ==== Cleanup Commands ====
+# To remove intermediate Python scripts, run from project root:
+#
+# rm spatial_colocalization_analysis.py
+# rm enhanced_il1r1_cxcl13_analysis.py
+# rm final_enhanced_analysis_with_tumor.py
+# rm comprehensive_analysis_with_CDKN1A.py
+# rm final_comprehensive_analysis.py
+# rm cellphonedb_brca_analysis.py
+# rm brca_cellphonedb_analysis.py
+# rm cellphonedb_il1r1_cxcl13_analysis.py
+# rm advanced_cellphonedb_analysis.py
+# rm celltypist_cellphonedb_analysis.py
+# rm fixed_celltypist_cellphonedb_analysis.py
+# rm continue_cellphonedb_analysis.py
+# rm final_comprehensive_cellphonedb_analysis.py
+# rm comprehensive_il1r1_cxcl13_cellphonedb_analysis.py
+# rm cellchat_il1r1_cxcl13_analysis.py
+# rm spatial_analysis_with_spotsweeper.py
+# rm cellchat_analysis.R
+#
+# Or to move to archive folder:
+# mkdir -p archive_scripts
+# mv *.py archive_scripts/ 2>/dev/null
+# mv cellchat_analysis.R archive_scripts/ 2>/dev/null
+# mv publication_code/*.py . 2>/dev/null  # Move publication code back
+
